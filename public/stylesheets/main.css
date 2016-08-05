@@ -1,0 +1,122 @@
+/* main.css */
+
+/* 
+	green: #11750C;
+	blue: #44C8DE;
+	orange: #FF4D22;
+	white: #F2E9E3;
+	grey: #FF4D22;
+*/
+
+html, body, .content-container {
+	height: 100%;
+	overflow: hidden;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  align-items: center;
+}
+
+h1, h2 {
+	color: #E5DBCE;
+}
+
+i {
+	vertical-align: middle;
+}
+
+.feed {
+	height: 100%;	
+}
+
+.feed_list {
+	  height: 90%;
+    /* overflow: auto; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: -33px;
+}
+
+.feed_header > h1 {
+	color: #FF4D22;
+}
+
+.feed_item {
+	/*margin-top: 5px;
+	margin-bottom: 5px;*/
+	margin: 5px;
+}
+
+.feed_item a {
+	color: #F2E9E3;
+}
+
+.dashboard {
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.dash-display {
+	background-color: rgba(44, 44, 47, 1.0);
+	-webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.google-analytics-dash {
+	/*visibility: hidden;*/
+	/*display: none;*/
+}
+
+.google-dash-background{
+	-webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+/* CSS for Google Analytics Charts */
+.legend{list-style:outside none none;margin:0;padding:1em 0 0;text-align:center}
+.legend > li{display:inline-block;/*padding:.25em .5em*/}
+.legend > li > i {display:inline-block;height:1em;margin-right: 0.5em;vertical-align: -0.1em;width:1em;}
+
+.ViewSelector2-item {
+	display: inline-block;
+	margin-right: 10px;
+  margin-top: 5px;
+}
+
+.navLinks {
+  position: fixed;
+  bottom: 0;
+  width: 66.67%;
+}
+
+.linkBar {
+	/*text-align: center;*/
+}
+
+.linkButton {
+	display: inline-block;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+.linkButton:hover {
+	background-color: rgba(70, 70, 77, 1.0);
+	-webkit-transition: background-color .25s;
+  -moz-transition: background-color .25s;
+  transition: background-color .25s;
+}
+
+/*i.fa-eye-slash {
+	vertical-align: middle;
+}*/

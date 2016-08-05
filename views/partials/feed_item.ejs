@@ -1,0 +1,20 @@
+<% for (var key in hackernews_results) { %>
+	<% if ( !hackernews_results.hasOwnProperty(key) ) { continue; } %>
+
+	<% include ../partials/feed_item.ejs %>
+
+<% } %>
+
+<div class="feed_item">
+	<div class="row row-eq-height">
+
+		<div class="col-xs-2">
+			<span class="feed_icon"><i class="fa fa-hacker-news fa-2x fa-inverse"></i></span>
+		</div>
+		<div class="col-xs-10" style="padding-left: 0px;">
+			
+			<span class="feed_link"><a target="_blank" href=<%= hackernews_results[key].url %>><%= hackernews_results[key].title %></a></span>
+
+		</div>
+	</div>
+</div>
