@@ -40,36 +40,6 @@ io.on('connection', function(socket) {
 		}
 	});
 
-	// reddit.get_hot_reddit_items( 1, "oculus", function( err, result ) {
-	// 	if( err ){
-	// 		console.log("Error: " + err);
-	// 	}
-	// 	else {
-	// 		// console.log(result);
-	// 		io.emit('new reddit news', result);
-	// 	}
-	// });
-
-	// reddit.get_hot_reddit_items( 1, "vive", function( err, result ) {
-	// 	if( err ){
-	// 		console.log("Error: " + err);
-	// 	}
-	// 	else {
-	// 		// console.log(result);
-	// 		io.emit('new reddit news', result);
-	// 	}
-	// });
-
-	// reddit.get_hot_reddit_items( 1, "nfl", function( err, result ) {
-	// 	if( err ){
-	// 		console.log("Error: " + err);
-	// 	}
-	// 	else {
-	// 		// console.log(result);
-	// 		io.emit('new reddit news', result);
-	// 	}
-	// });
-
 	socket.on('disconnect', function() {
 		console.log('user disconnected');
 	});
@@ -86,7 +56,7 @@ io.on('connection', function(socket) {
 			}
 		});
 
-		reddit.get_hot_reddit_items( 25, function( err, result ) {
+		reddit.get_front_reddit_items( 25, function( err, result ) {
 			if( err ){
 				console.log("Error: " + err);
 			}
@@ -96,38 +66,8 @@ io.on('connection', function(socket) {
 			}
 		});
 
-  // 	reddit.get_hot_reddit_items( 3, "oculus", function( err, result ) {
-		// 	if( err ){
-		// 		console.log("Error: " + err);
-		// 	}
-		// 	else {
-		// 		// console.log(result);
-		// 		io.emit('new reddit news', result);
-		// 	}
-		// });
-
-		// reddit.get_hot_reddit_items( 3, "vive", function( err, result ) {
-		// 	if( err ){
-		// 		console.log("Error: " + err);
-		// 	}
-		// 	else {
-		// 		// console.log(result);
-		// 		io.emit('new reddit news', result);
-		// 	}
-		// });
-
-		// reddit.get_hot_reddit_items( 3, "nfl", function( err, result ) {
-		// 	if( err ){
-		// 		console.log("Error: " + err);
-		// 	}
-		// 	else {
-		// 		// console.log(result);
-		// 		io.emit('new reddit news', result);
-		// 	}
-		// });
-
 	}, 300000);
-
+// original: 300000
 });
 
 http.listen( process.env.PORT || 3000, function() {
